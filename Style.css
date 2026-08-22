@@ -4370,3 +4370,15 @@ body{
 .refined-light .info-logo.bigger,
 .capture-mode .info-logo.bigger{display:block!important;width:650px!important;max-width:none!important;height:260px!important;object-fit:contain!important;margin:0 auto!important}
 .report-disclaimer .notice-pin{display:inline-block!important;margin-left:10px!important;font-size:28px!important;line-height:1!important;vertical-align:middle!important}
+
+/* REPORT KPI V4 — رقم الأرباح مطابق تماماً لأرقام بقية الصناديق */
+.refined-light .info-stats.refined-order .info-stat.totalprofit .digital.money.bigmoney,
+.capture-mode .info-stats.refined-order .info-stat.totalprofit .digital.money.bigmoney,
+.preview-live-scale .capture-mode .info-stats.refined-order .info-stat.totalprofit .digital.money.bigmoney,
+.export-stage .capture-mode .info-stats.refined-order .info-stat.totalprofit .digital.money.bigmoney{
+  font-family:"Cairo",Arial,Tahoma,sans-serif!important;
+  font-size:46px!important;
+  font-weight:900!important;
+  line-height:1!important;
+  letter-spacing:0!important;
+}
