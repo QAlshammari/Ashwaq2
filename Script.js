@@ -45,7 +45,7 @@ function scheduleCloudSave(){
   if(!cloudReady || applyingCloudState || !cloudRootRef) return;
   clearTimeout(cloudSaveTimer);
   cloudSaveTimer=setTimeout(()=>{
-    cloudRootRef.update(sharedCloudPayload()).catch(err=>{
+    cloudRootRef.set(sharedCloudPayload()).catch(err=>{
       console.error('Firebase save failed',err);
       showToast('تعذر مزامنة الصفقات؛ تحقق من الاتصال');
     });
