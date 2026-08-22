@@ -4371,6 +4371,94 @@ body{
 .capture-mode .info-logo.bigger{display:block!important;width:650px!important;max-width:none!important;height:260px!important;object-fit:contain!important;margin:0 auto!important}
 .report-disclaimer .notice-pin{display:inline-block!important;margin-left:10px!important;font-size:28px!important;line-height:1!important;vertical-align:middle!important}
 
+/* COMPANY NAMES V8 — توسيط وتكبير أسماء الشركات داخل الخلايا */
+.refined-light .info-table.roomy tbody td.symbol-cell,
+.capture-mode .info-table.roomy tbody td.symbol-cell,
+.refined-light .infographic-table-panel.many-trades .info-table.roomy tbody td.symbol-cell,
+.capture-mode .infographic-table-panel.many-trades .info-table.roomy tbody td.symbol-cell,
+.preview-live-scale .capture-mode .info-table.roomy tbody td.symbol-cell,
+.export-stage .capture-mode .info-table.roomy tbody td.symbol-cell{
+  padding-inline:4px!important;
+  text-align:center!important;
+  vertical-align:middle!important;
+  font-family:"Cairo",Arial,Tahoma,sans-serif!important;
+  font-size:38px!important;
+  font-weight:900!important;
+  line-height:1!important;
+  letter-spacing:.2px!important;
+  color:#17110b!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+.refined-light .info-table.roomy td.symbol-cell .symbol-stack,
+.capture-mode .info-table.roomy td.symbol-cell .symbol-stack,
+.preview-live-scale .capture-mode .info-table.roomy td.symbol-cell .symbol-stack,
+.export-stage .capture-mode .info-table.roomy td.symbol-cell .symbol-stack{
+  width:100%!important;
+  min-width:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+}
+.refined-light .info-table.roomy td.symbol-cell .symbol-stack span,
+.capture-mode .info-table.roomy td.symbol-cell .symbol-stack span,
+.preview-live-scale .capture-mode .info-table.roomy td.symbol-cell .symbol-stack span,
+.export-stage .capture-mode .info-table.roomy td.symbol-cell .symbol-stack span{
+  display:block!important;
+  max-width:100%!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+  white-space:nowrap!important;
+  font:inherit!important;
+  color:inherit!important;
+}
+
+/* TABLE CELLS V8 — توسيط وتثقيل كل البيانات مع إبقاء ألوان الحالات */
+.refined-light .info-table.roomy tbody td,
+.capture-mode .info-table.roomy tbody td,
+.refined-light .infographic-table-panel.many-trades .info-table.roomy tbody td,
+.capture-mode .infographic-table-panel.many-trades .info-table.roomy tbody td,
+.preview-live-scale .capture-mode .info-table.roomy tbody td,
+.export-stage .capture-mode .info-table.roomy tbody td{
+  text-align:center!important;
+  vertical-align:middle!important;
+  font-family:"Cairo",Arial,Tahoma,sans-serif!important;
+  font-weight:900!important;
+  font-style:normal!important;
+}
+.refined-light .info-table.roomy thead th,
+.capture-mode .info-table.roomy thead th,
+.preview-live-scale .capture-mode .info-table.roomy thead th,
+.export-stage .capture-mode .info-table.roomy thead th{
+  text-align:center!important;
+  vertical-align:middle!important;
+  font-family:"Cairo",Arial,Tahoma,sans-serif!important;
+  font-weight:900!important;
+}
+
+/* SAVED IMAGE FRAME V9 — برواز خارجي ذهبي ثلاثي الأبعاد */
+.capture-mode.infographic-card,
+.export-stage .capture-mode.infographic-card{
+  box-sizing:border-box!important;
+  border:10px solid #c89535!important;
+  border-top-color:#f5d98c!important;
+  border-right-color:#d8a94d!important;
+  border-bottom-color:#71470d!important;
+  border-left-color:#9b681d!important;
+  border-radius:26px!important;
+  outline:3px solid #6f4610!important;
+  outline-offset:-4px!important;
+  box-shadow:
+    inset 0 0 0 3px #fff3c4,
+    inset 0 0 0 7px rgba(113,71,13,.34),
+    inset 0 10px 16px rgba(255,255,255,.72),
+    inset 0 -12px 18px rgba(91,55,7,.22),
+    0 14px 28px rgba(67,42,9,.30)!important;
+  overflow:hidden!important;
+}
+
 /* صندوق أرباح جديد مستقل عن جميع تنسيقات totalprofit القديمة */
 .refined-light .info-stats.refined-order .info-stat.profit-new,
 .capture-mode .info-stats.refined-order .info-stat.profit-new{
