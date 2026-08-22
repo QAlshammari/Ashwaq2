@@ -4346,3 +4346,27 @@ body{
   min-width:1600px!important;
   max-width:1600px!important;
 }
+
+/* FINAL — عناوين صناديق التقرير موحدة وكبيرة وثقيلة */
+.refined-light .info-stats.refined-order .info-stat .info-label b,
+.capture-mode .info-stats.refined-order .info-stat .info-label b{
+  font-family:"Cairo",Arial,Tahoma,sans-serif!important;
+  font-size:29px!important;
+  font-weight:900!important;
+  line-height:1!important;
+  color:#21180f!important;
+  white-space:nowrap!important;
+}
+.refined-light .info-stats.refined-order .info-stat .digital,
+.capture-mode .info-stats.refined-order .info-stat .digital{
+  font-family:"Cairo",Arial,Tahoma,sans-serif!important;
+  font-size:46px!important;
+  font-weight:900!important;
+}
+.refined-light .info-header.logo-only,
+.capture-mode .info-header.logo-only{width:100%!important;min-height:285px!important;overflow:visible!important}
+.refined-light .info-logo-wrap.wide,
+.capture-mode .info-logo-wrap.wide{width:100%!important;overflow:visible!important}
+.refined-light .info-logo.bigger,
+.capture-mode .info-logo.bigger{display:block!important;width:650px!important;max-width:none!important;height:260px!important;object-fit:contain!important;margin:0 auto!important}
+.report-disclaimer .notice-pin{display:inline-block!important;margin-left:10px!important;font-size:28px!important;line-height:1!important;vertical-align:middle!important}

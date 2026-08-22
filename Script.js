@@ -45,7 +45,7 @@ function scheduleCloudSave(){
   if(!cloudReady || applyingCloudState || !cloudRootRef) return;
   clearTimeout(cloudSaveTimer);
   cloudSaveTimer=setTimeout(()=>{
-    cloudRootRef.set(sharedCloudPayload()).catch(err=>{
+    cloudRootRef.update(sharedCloudPayload()).catch(err=>{
       console.error('Firebase save failed',err);
       showToast('تعذر مزامنة الصفقات؛ تحقق من الاتصال');
     });
@@ -894,23 +894,23 @@ function buildShareTemplate(maxRows=10, captureId="shareCapture"){
 
       <div class="info-stats refined-order">
         <div class="info-stat loss-stat">
-          <div class="info-stat-top"><span class="info-icon loss">−</span><div class="info-label"><b>الصفقات الخاسرة</b></div></div>
+          <div class="info-stat-top"><span class="info-icon loss">−</span><div class="info-label"><b>خاسرة</b></div></div>
           <div class="digital red">${s.losses.length}</div>
         </div>
         <div class="info-stat stopped-stat">
-          <div class="info-stat-top"><span class="info-icon stopped">Ⅱ</span><div class="info-label"><b>الصفقات الموقوفة</b></div></div>
+          <div class="info-stat-top"><span class="info-icon stopped">Ⅱ</span><div class="info-label"><b>موقوفة</b></div></div>
           <div class="digital cyan">${stoppedCount}</div>
         </div>
         <div class="info-stat win-stat">
-          <div class="info-stat-top"><span class="info-icon win">✓</span><div class="info-label"><b>الصفقات الناجحة</b></div></div>
+          <div class="info-stat-top"><span class="info-icon win">✓</span><div class="info-label"><b>ناجحة</b></div></div>
           <div class="digital green">${s.wins.length}</div>
         </div>
         <div class="info-stat total-trades-stat">
-          <div class="info-stat-top"><span class="info-icon layers">≡</span><div class="info-label"><b>إجمالي الصفقات</b></div></div>
+          <div class="info-stat-top"><span class="info-icon layers">≡</span><div class="info-label"><b>الصفقات</b></div></div>
           <div class="digital number">${s.counted.length}</div>
         </div>
         <div class="info-stat totalprofit">
-          <div class="info-stat-top"><span class="info-icon cash">$</span><div class="info-label"><b>إجمالي الأرباح</b></div></div>
+          <div class="info-stat-top"><span class="info-icon cash">$</span><div class="info-label"><b>الأرباح</b></div></div>
           <div class="digital money bigmoney">${moneyInt(s.net)}</div>
         </div>
       </div>
@@ -1003,7 +1003,7 @@ function buildShareTemplate(maxRows=10, captureId="shareCapture"){
       </div>
 
       <div class="report-footer-note footer-only">
-        <div class="report-disclaimer">جميع نتائج الصفقات المطروحة في الجدول عبارة عن سعر الدخول والتوجيه بالخروج، وليست أعلى سعر محقق للعقد.</div>
+        <div class="report-disclaimer"><span class="notice-pin" aria-hidden="true">📌</span>جميع نتائج الصفقات المطروحة في الجدول عبارة عن سعر الدخول والتوجيه بالخروج، وليست أعلى سعر محقق للعقد.</div>
         <div class="info-contact">للتواصل عبر تليجرام <b dir="ltr">@Qalshammari</b></div>
       </div>
     </div>`;
