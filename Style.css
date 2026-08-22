@@ -4371,6 +4371,26 @@ body{
 .capture-mode .info-logo.bigger{display:block!important;width:650px!important;max-width:none!important;height:260px!important;object-fit:contain!important;margin:0 auto!important}
 .report-disclaimer .notice-pin{display:inline-block!important;margin-left:10px!important;font-size:28px!important;line-height:1!important;vertical-align:middle!important}
 
+/* صندوق أرباح جديد مستقل عن جميع تنسيقات totalprofit القديمة */
+.refined-light .info-stats.refined-order .info-stat.profit-new,
+.capture-mode .info-stats.refined-order .info-stat.profit-new{
+  background:#fff8df!important;
+  border-color:#e2c16e!important;
+  border-bottom-color:#a86c13!important;
+  box-shadow:0 8px 0 rgba(168,108,19,.30),0 17px 25px rgba(152,93,16,.15),inset 0 2px 0 #fff!important;
+}
+.refined-light .info-stats.refined-order .info-stat.profit-new .profit-new-value,
+.capture-mode .info-stats.refined-order .info-stat.profit-new .profit-new-value,
+.preview-live-scale .capture-mode .info-stats.refined-order .info-stat.profit-new .profit-new-value,
+.export-stage .capture-mode .info-stats.refined-order .info-stat.profit-new .profit-new-value{
+  font-family:"Cairo",Arial,Tahoma,sans-serif!important;
+  font-size:46px!important;
+  font-weight:900!important;
+  line-height:1!important;
+  color:#21803d!important;
+  letter-spacing:0!important;
+}
+
 /* REPORT KPI V4 — رقم الأرباح مطابق تماماً لأرقام بقية الصناديق */
 .refined-light .info-stats.refined-order .info-stat.totalprofit .digital.money.bigmoney,
 .capture-mode .info-stats.refined-order .info-stat.totalprofit .digital.money.bigmoney,

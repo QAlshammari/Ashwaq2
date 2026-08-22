@@ -909,9 +909,9 @@ function buildShareTemplate(maxRows=10, captureId="shareCapture"){
           <div class="info-stat-top"><span class="info-icon layers">≡</span><div class="info-label"><b>الصفقات</b></div></div>
           <div class="digital number">${s.counted.length}</div>
         </div>
-        <div class="info-stat totalprofit">
+        <div class="info-stat profit-new">
           <div class="info-stat-top"><span class="info-icon cash">$</span><div class="info-label"><b>الأرباح</b></div></div>
-          <div class="digital money bigmoney">${moneyInt(s.net)}</div>
+          <div class="digital profit-new-value">${moneyInt(s.net)}</div>
         </div>
       </div>
 
