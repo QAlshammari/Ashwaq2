@@ -1273,8 +1273,31 @@ async function saveOrShareTopTrades(e){
     const captureHeight=Math.ceil(Math.max(target.scrollHeight,target.getBoundingClientRect().height));
     // دقة أعلى للصورة النهائية لتبقى الكتابة واضحة بعد ضغط تطبيقات المراسلة.
     // نستخدم 3x عادة، مع تخفيض تلقائي فقط للتقارير الطويلة حمايةً لذاكرة Safari.
-    const maxCanvasPixels=32_000_000;
-    const scale=Math.max(2.25,Math.min(3,Math.sqrt(maxCanvasPixels/(captureWidth*captureHeight))));
+    // حماية تصدير الصور الطويلة (خصوصاً تقرير 4 أسابيع) من قص الجزء السفلي
+    // في Safari / iPhone. لا نغيّر البيانات أو الصفقات؛ نخفض الـscale تلقائياً
+    // عندما يكون التقرير طويلاً حتى يبقى الـCanvas ضمن حدود الجهاز.
+    const MAX_CANVAS_PIXELS = 24_000_000;
+    const MAX_CANVAS_DIMENSION = 16_000;
+
+    const pixelScale = Math.sqrt(
+      MAX_CANVAS_PIXELS / (captureWidth * captureHeight)
+    );
+
+    const dimensionScale =
+      MAX_CANVAS_DIMENSION / Math.max(captureWidth, captureHeight);
+
+    const scale = Math.max(
+      1.35,
+      Math.min(3, pixelScale, dimensionScale)
+    );
+
+    console.info('Image export:', {
+      captureWidth,
+      captureHeight,
+      scale,
+      finalWidth: Math.ceil(captureWidth * scale),
+      finalHeight: Math.ceil(captureHeight * scale)
+    });
     const canvas=await html2canvas(target,{
       scale,
       width:captureWidth,
